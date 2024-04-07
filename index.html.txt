@@ -1,0 +1,22 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+</head>
+<body>
+  <div id="popcash-container"></div>
+
+  <script>
+    (function() {
+      var pop_tag = document.createElement('script');
+      pop_tag.src = '//cdn.popcash.net/show.js';
+      pop_tag.onload = function() {
+        pop_tag.contentWindow.postMessage('{"action": "show", "container": "popcash-container", "noClick": true, "inline": true, "gdpr": {"consent": true}, "autostart": true}', '*');
+      };
+      document.body.appendChild(pop_tag);
+    })();
+  </script>
+</body>
+</html>
